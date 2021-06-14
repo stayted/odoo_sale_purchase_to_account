@@ -13,3 +13,7 @@ class SaleOrder(models.Model):
         res["x_studio_incoterms"] = self.x_studio_incoterms
         return res
 
+    def _prepare_invoice_line(self, **optional_values):
+        res = super()._prepare_invoice_line( optional_values )
+        res["x_studio_n_pezzi"] = self.x_studio_n_pezzi
+        return res
