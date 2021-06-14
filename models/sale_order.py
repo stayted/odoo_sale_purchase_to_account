@@ -11,9 +11,13 @@ class SaleOrder(models.Model):
     def _prepare_invoice(self):
         res = super()._prepare_invoice()
         res["x_studio_incoterms"] = self.x_studio_incoterms
+        res["x_studio_metodo_di_pagamento_per_questa_fattura"] = self.x_studio_metodo_di_pagamento_per_questo_ordine
         return res
 
+class SaleOrderLine(models.Model):
+    _inherit = "sale.order.line"
+
     def _prepare_invoice_line(self, **optional_values):
-        res = super()._prepare_invoice_line( optional_values )
+        res = super()._prepare_invoice_line( **optional_values )
         res["x_studio_da_n_pezzi"] = self.x_studio_da_n_pezzi
         return res
