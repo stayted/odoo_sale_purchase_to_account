@@ -4,7 +4,7 @@
 
 This module copy:
 
--  `x\_studio\_incoterms` from `sale.order`
+-  `x_studio_incoterms` from `sale.order`
 
 to `account.move` when an account\_invoice is generated.
 
