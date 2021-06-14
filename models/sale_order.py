@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# Al momento della creazione di una fattura:
+#   prende sale_order.x_studio_incoterms e lo copia in account_move.x_da_incoterms
+
+
+from odoo import models
+
+class SaleOrder(models.Model):
+    _inherit = "sale.order"
+
+    def _prepare_invoice(self):
+        res = super()._prepare_invoice()
+        res["x_studio_da_test_field"] = self.x_studio_da_test_field
+        return res
+
