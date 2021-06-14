@@ -10,6 +10,6 @@ class SaleOrder(models.Model):
 
     def _prepare_invoice(self):
         res = super()._prepare_invoice()
-        res["x_studio_da_test_field"] = self.x_studio_da_test_field
+        res["x_studio_incoterms"] = self.x_studio_incoterms
         return res
 

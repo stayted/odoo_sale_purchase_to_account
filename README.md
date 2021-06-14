@@ -4,8 +4,7 @@
 
 This module copy:
 
--  "" from `sale.order`
-- "" from `purchase.order`
+-  `x\_studio\_incoterms` from `sale.order`
 
 to `account.move` when an account\_invoice is generated.
 
