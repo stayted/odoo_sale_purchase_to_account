@@ -15,5 +15,5 @@ class SaleOrder(models.Model):
 
     def _prepare_invoice_line(self, **optional_values):
         res = super()._prepare_invoice_line( optional_values )
-        res["x_studio_n_pezzi"] = self.x_studio_n_pezzi
+        res["x_studio_da_n_pezzi"] = self.x_studio_da_n_pezzi
         return res
