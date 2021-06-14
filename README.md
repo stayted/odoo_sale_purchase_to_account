@@ -1,4 +1,6 @@
-# ODOO - Copy fields from sale.order and purchase.order to account.move
+# Digital Automations - Odoo Module
+
+> Copy fields from sale.order and purchase.order to account.move
 
 This module copy:
 
